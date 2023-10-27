@@ -4,13 +4,12 @@ import { subscribeWithSelector } from "zustand/middleware";
 export default create(
   subscribeWithSelector((set) => {
     return {
-      /**
-       * Character animations state manegement
-       */
-      // Initial animation
       curAnimation: null,
       animationSet: {},
       showModal: false,
+      isAbleToOpen: false,
+      showSettings: false,
+      modalTarget: "",
 
       initializeAnimationSet: (animationSet) => {
         set((state) => {
@@ -89,21 +88,33 @@ export default create(
         });
       },
 
-      setShowModal: () => {
+      setShowModal: (showModal) => {
         set((state) => {
-          debugger;
-          return !state.showModal;
+          state.showModal = showModal
+          return { showModal: state.showModal };
         })
-      }
+      },
 
-      /**
-       * Additional animations
-       */
-      // triggerFunction: ()=>{
-      //    set((state) => {
-      //        return { curAnimation: state.animationSet.additionalAnimation };
-      //    });
-      // }
+      setIsAbleToOpen: (isAbleToOpen) => {
+        set((state) => {
+          state.isAbleToOpen = isAbleToOpen
+          return { isAbleToOpen: state.isAbleToOpen };
+        });
+      },
+      
+      setShowSettings: (showSettings) => {
+        set((state) => {
+          state.showSettings = showSettings
+          return { showSettings: state.showSettings };
+        });
+      },
+
+      setModalTarget: (modalTarget) => {
+        set((state) => {
+          state.modalTarget = modalTarget
+          return { modalTarget: state.modalTarget };
+        });
+      },
     };
   })
 );

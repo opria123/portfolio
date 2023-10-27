@@ -1,20 +1,13 @@
-import React, { useContext, useState, useEffect } from "react";
+import React from "react";
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
-import { Routes, Route, Navigate, NavLink, useSearchParams } from 'react-router-dom';
-import { Link } from 'react-router-dom'
-
-
-
-// import { Context } from "./app-context/context"
-
+import  useGame  from '../stores/useGame'
 
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -33,34 +26,21 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
 
 export default function SettingsModal() {
-    const [modalState, setModalState] = useState(false);
 
-    const [searchParams, setSearchParams] = useSearchParams();
+    const setShowSettings = useGame((state) => state.setShowSettings);
+    const showSettings = useGame((state) => state.showSettings);
+
 
     const handleClose = () => {
-        console.log('testing')
-        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?showSettingsModal=false';
-        window.history.pushState({ path: newurl }, '', newurl);
-        setSearchParams(window.location.search);
-        setModalState(false);
+        setShowSettings(false);
         document.getElementsByTagName('canvas')[0].requestPointerLock();
     };
-
-
-    useEffect(() => {
-        // execute on location change
-        console.log(searchParams);
-        if (searchParams.get('showSettingsModal') === 'true') {
-            setModalState(true);
-            document.exitPointerLock();
-        }
-    }, [searchParams, setSearchParams]);
 
     return (
         <BootstrapDialog
             onClose={handleClose}
             aria-labelledby="customized-dialog-title"
-            open={modalState}
+            open={showSettings}
         >
             <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
                 Settings
@@ -81,7 +61,7 @@ export default function SettingsModal() {
                 <Typography gutterBottom>
                     <Button
                         variant="contained"
-                        onClick={() => {window.location.href = "/interactive"}}>
+                        onClick={() => {setShowSettings(false); window.location.href = "/interactive"}}>
                         Reset
                     </Button>
                     <span className="setting-description">Resets the Character Position</span>
@@ -89,8 +69,7 @@ export default function SettingsModal() {
                 <Typography gutterBottom>
                     <Button
                         variant="contained"
-                        component={Link}
-                        to="/">
+                        onClick={() => {setShowSettings(false); window.location.href = "/"}}>
                         Go Home
                     </Button>
                     <span className="setting-description">Goes back to the home page</span>

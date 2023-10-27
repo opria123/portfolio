@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React from "react";
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
@@ -8,10 +8,8 @@ import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
-import { Routes, Route, Navigate, NavLink, useSearchParams } from 'react-router-dom';
-
-
-// import { Context } from "./app-context/context"
+import  useGame  from '../stores/useGame'
+import { useEffect } from "react";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -24,34 +22,25 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
 
 export default function DynamicModal() {
-  const [modalState, setModalState] = useState(false);
-
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const handleClose = () => {
-    console.log('testing')
-    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?showModal=false';
-    window.history.pushState({ path: newurl }, '', newurl);
-    setSearchParams(window.location.search);
-    setModalState(false);
-    document.getElementsByTagName('canvas')[0].requestPointerLock();
-  };
-
+  const showModal = useGame((state) => state.showModal);
+  const setShowModal = useGame((state) => state.setShowModal);
+  const modalTarget = useGame((state) => state.modalTarget);
 
   useEffect(() => {
-    // execute on location change
-    console.log(searchParams);
-    if (searchParams.get('showModal') === 'true') {
-      setModalState(true);
-      document.exitPointerLock();
-    }
-  }, [searchParams, setSearchParams]);
+    console.log(modalTarget);
+  }, [modalTarget]);
+
+
+  const handleClose = () => {
+    document.getElementsByTagName('canvas')[0].requestPointerLock();
+    setShowModal(false)
+  };
 
   return (
     <BootstrapDialog
       onClose={handleClose}
       aria-labelledby="customized-dialog-title"
-      open={modalState}
+      open={showModal}
     >
       <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
         Modal title
