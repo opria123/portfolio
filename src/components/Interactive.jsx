@@ -6,18 +6,19 @@ import SettingsModal from "./Settings"
 import { Leva } from "leva";
 import StarSky from "react-star-sky";
 import SettingsIcon from '@mui/icons-material/Settings';
-import { Link } from 'react-router-dom'
 import Button from '@mui/material/Button';
+import useGame from '../stores/useGame'
 
 
 
 export default function Interactive() {
+    const setShowSettings = useGame((state) => state.setShowSettings);
+
     return (
         <>
             <Button
                 className="settings-icon"
-                component={Link}
-                to="/interactive?showSettingsModal=true">
+                onClick={() => {setShowSettings(true)}}>
                 <SettingsIcon
                     className="settings-icon"
                     fontSize="large" />

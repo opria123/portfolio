@@ -112,29 +112,104 @@ export default function FloatingPlatform() {
 
   return (
     <>
-      {/* Platform 1 */}
-      <RigidBody userData="contact_info" position={[4, 1, 0]} mass={1} ref={floatingPlateRef}>
-        <mesh receiveShadow castShadow>
-          <boxGeometry args={[5, 0.2, 5]} />
-          <meshStandardMaterial color={"lightsteelblue"} />
-        </mesh>
-      </RigidBody>
 
       {/* Platform 2 */}
-      <RigidBody userData="projects" position={[-4.75, 0, 6]} mass={100} ref={floatingPlateRef2}>
+      <RigidBody userData="experience" position={[-4.75, -0.1, 6]} mass={100} ref={floatingPlateRef}>
         <Text
           scale={0.5}
-          color="white"
+          color="#15AC07"
+          outlineColor="black"
+          outlineWidth={0.1}
           maxWidth={10}
           textAlign="center"
           position={[0, 1.5, 0]}
           rotation-y={1.5}
         >
-          Skills {"\n"}
+          Experience {"\n"}
           (Press Enter Here)
         </Text>
         <mesh receiveShadow >
           <boxGeometry args={[2.5, 0.1, 5]} />
+          <meshStandardMaterial color={"grey"} opacity={0} transparent/>
+        </mesh>
+      </RigidBody>
+
+      <RigidBody userData="projects" position={[-6.5, 0.15, -3]} mass={100} ref={floatingPlateRef2}>
+        <Text
+          scale={0.5}
+          color="#15AC07"
+          outlineColor="black"
+          outlineWidth={0.1}
+          maxWidth={10}
+          textAlign="center"
+          position={[1, 3, 0]}
+          rotation-y={1.5}
+        >
+          Projects {"\n"}
+          (Press Enter Here)
+        </Text>
+        <mesh receiveShadow >
+          <boxGeometry args={[6, 0.1, 5]} />
+          <meshStandardMaterial color={"grey"} opacity={0} transparent/>
+        </mesh>
+      </RigidBody>
+
+      <RigidBody userData="about" position={[3, 0, 6]} mass={100} ref={floatingPlateRef2}>
+        <Text
+          scale={0.5}
+          color="#15AC07"
+          outlineColor="black"
+          outlineWidth={0.1}
+          maxWidth={10}
+          textAlign="center"
+          position={[0, 1.5, 0]}
+          rotation-y={-1.5}
+        >
+          About {"\n"}
+          (Press Enter Here)
+        </Text>
+        <mesh receiveShadow >
+          <boxGeometry args={[5, 0.1, 5]} />
+          <meshStandardMaterial color={"grey"} opacity={0} transparent/>
+        </mesh>
+      </RigidBody>
+
+      <RigidBody userData="contact" position={[-11.5, -0.2, 1.5]} mass={100} ref={floatingPlateRef2}>
+        <Text
+          scale={0.5}
+          color="#15AC07"
+          outlineColor="black"
+          outlineWidth={0.1}
+          maxWidth={10}
+          textAlign="center"
+          position={[0, 1.5, 0]}
+          rotation-y={1.5}
+        >
+          Contact {"\n"}
+          (Press Enter Here)
+        </Text>
+        <mesh receiveShadow >
+          <boxGeometry args={[4, 0.1, 5]} />
+          <meshStandardMaterial color={"grey"} opacity={0} transparent/>
+        </mesh>
+      </RigidBody>
+
+      <RigidBody userData="resume" position={[3, -0.4, -3]} mass={100} ref={floatingPlateRef2}>
+        <Text
+          scale={0.5}
+          color="#15AC07"
+          outlineColor="black"
+          outlineWidth={0.1}
+          maxWidth={10}
+          textAlign="center"
+          position={[0, 1.5, 0]}
+          rotation-y={-1.5}
+        >
+          Resume {"\n"}
+          (Press Enter Here)
+        </Text>
+        <mesh receiveShadow >
+          <boxGeometry args={[6, 0.1, 5]} />
           <meshStandardMaterial color={"grey"} opacity={0} transparent/>
         </mesh>
       </RigidBody>

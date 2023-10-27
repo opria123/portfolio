@@ -107,6 +107,10 @@ export default function SettingsModal() {
                     <span className="control-character">Backspace</span>
                     <span className="setting-description">Open Settings</span>
                 </Typography>
+                <Typography gutterBottom>
+                    <span className="control-character">Enter</span>
+                    <span className="setting-description">Interact to open promts</span>
+                </Typography>
             </DialogContent>
         </BootstrapDialog>
     );

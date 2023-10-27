@@ -8,10 +8,19 @@ import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
-import  useGame  from '../stores/useGame'
+import useGame from '../stores/useGame'
 import { useEffect } from "react";
+import Work from "./Work";
+import About from "./About";
+import Projects from "./Projects";
+import ContactForm from "./Contact";
+import Resume from "./Resume";
+
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  '& .css-1qxadfk-MuiPaper-root-MuiDialog-paper': {
+    minWidth: '70%',
+  },
   '& .MuiDialogContent-root': {
     padding: theme.spacing(2),
   },
@@ -26,8 +35,15 @@ export default function DynamicModal() {
   const setShowModal = useGame((state) => state.setShowModal);
   const modalTarget = useGame((state) => state.modalTarget);
 
+  let content;
+
   useEffect(() => {
     console.log(modalTarget);
+    if (modalTarget === 'experience') {
+      content = <Work />;
+    } else {
+      content = null;
+    }
   }, [modalTarget]);
 
 
@@ -43,7 +59,7 @@ export default function DynamicModal() {
       open={showModal}
     >
       <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-        Modal title
+        {modalTarget}
       </DialogTitle>
       <IconButton
         aria-label="close"
@@ -58,20 +74,11 @@ export default function DynamicModal() {
         <CloseIcon />
       </IconButton>
       <DialogContent dividers>
-        <Typography gutterBottom>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </Typography>
-        <Typography gutterBottom>
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-          Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-        </Typography>
-        <Typography gutterBottom>
-          Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
-          magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec
-          ullamcorper nulla non metus auctor fringilla.
-        </Typography>
+      {modalTarget === 'experience' && <Work/> }
+      {modalTarget === 'about' && <About/> }
+      {modalTarget === 'projects' && <Projects/> }
+      {modalTarget === 'contact' && <ContactForm/> }
+      {modalTarget === 'resume' && <Resume /> }
       </DialogContent>
       <DialogActions>
         <Button autoFocus onClick={handleClose}>

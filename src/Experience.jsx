@@ -13,6 +13,10 @@ import DynamicPlatforms from "../example/DynamicPlatforms.jsx";
 import ShotCube from "../example/ShotCube";
 import { useControls } from "leva";
 import CharacterModel from "./CharacterModel.jsx";
+import { useState, useRef, Suspense } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Points, PointMaterial, Preload } from "@react-three/drei";
+import * as random from "maath/random/dist/maath-random.esm";
 
 export default function Experience() {
   /**
@@ -39,8 +43,9 @@ export default function Experience() {
     <>
 
       <Lights />
-
       <Physics debug={physics} timeStep="vary">
+
+        <Preload all />
         <KeyboardControls map={keyboardMap}>
           <CharacterController>
             <CharacterModel />
