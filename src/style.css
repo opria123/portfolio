@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+html,
+body,
+#root {
+  position: fixed;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.high-emphasis-text {
+  opacity: 87%;
+}
+
+.medeium-emphasis-text {
+  opacity: 60%;
+}
+
+.low-emphasis-text {
+  opacity: 30%;
+}
+
+.mode-selection {
+  width: 100%;;
+}
+
+.settings-modal {
+  background-color: transparent;
+}
+
+.setting-description {
+  float: right;
+}
+.settings-icon {
+  position: absolute !important;
+  z-index: 500;
+  margin-top: 1% !important;
+}
+
+.control-character {
+  font-size: xx-large;
+}
+
+.controlKeys {
+  position: absolute;
+  width: 25%;
+  left: 5%;
+  bottom: 10%;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  z-index: 500;
+}
+
+.title {
+  font-size: 0.8rem;
+  color: darkgray;
+  position: absolute;
+  width: 100%;
+  bottom: 2%;
+  text-align: center;
+}
+
+.title > a {
+  color: rgb(79, 189, 249);
+}
