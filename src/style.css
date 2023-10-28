@@ -333,3 +333,7 @@ body,
   width: 100%;
   height: 100%;
 }
+
+& .css-1qxadfk-MuiPaper-root-MuiDialog-paper: {
+  min-width: '70%',
+}
