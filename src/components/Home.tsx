@@ -50,20 +50,20 @@ export default function Home() {
                 direction="row"
             >
                 <Grid item xs={12} sx={{ minHeight: '25vh' }}></Grid>
-                <Grid item xs={2} xl={1}/>
+                <Grid item xs={2} xl={1} />
                 <Grid item xs={10}>
                     <h1 className="high-emphasis-text centered-text">How do you want to use the site</h1>
                 </Grid>
-                <Grid item xs={5} xl={4}/>
+                <Grid item xs={5} xl={4} />
                 <Grid item xs={2} >
-                    <a style={{ textDecoration: "none" }} href="/interactive">
+                    <Link style={{ textDecoration: "none" }} to="interactive">
                         <Card sx={{ height: "100%", maxWidth: "95%" }}>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
                                     image="/interactive.png"
                                     alt="containers"
-                                    sx={{minHeight: "20vh"}}
+                                    sx={{ minHeight: "20vh" }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
@@ -76,17 +76,17 @@ export default function Home() {
                                 </CardContent>
                             </CardActionArea>
                         </Card>
-                    </a>
+                    </Link>
                 </Grid>
                 <Grid item item xs={2}>
-                    <a style={{ textDecoration: "none" }} href="/standard">
+                    <Link style={{ textDecoration: "none" }} to="standard">
                         <Card sx={{ maxWidth: "95%", height: "100%" }}>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
                                     image="/standard.png"
                                     alt="containers"
-                                    sx={{minHeight: "20vh"}}
+                                    sx={{ minHeight: "20vh" }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
@@ -98,7 +98,7 @@ export default function Home() {
                                 </CardContent>
                             </CardActionArea>
                         </Card>
-                    </a>
+                    </Link>
                 </Grid>
             </Grid >
         </>
