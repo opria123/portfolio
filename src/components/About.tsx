@@ -13,7 +13,7 @@ export default function ActionAreaCard() {
   return (
     <>
       <Grid className='section' container row-spacing={20} spacing={1}>
-        <Grid item xs={1.5} />
+        <Grid item xs={1.5} xl={3} />
         <Grid item xs={7}>
           <motion.div variants={textVariant()}>
             <p className='{styles.sectionSubText}'>Introduction</p>
@@ -35,8 +35,8 @@ export default function ActionAreaCard() {
           </motion.p>
         </Grid>
         <Grid item xs={12} />
-        <Grid item xs={1.5} />
-        <Grid item xs={3}>
+        <Grid item xs={1.5}  xl={3}/>
+        <Grid item xs={3} xl={2}>
           <Card sx={{ maxWidth: 345, height: "100%"}}>
             <CardActionArea>
               <CardMedia
@@ -58,7 +58,7 @@ export default function ActionAreaCard() {
             </CardActionArea>
           </Card>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={3} xl={2}>
           <Card sx={{ maxWidth: 345, height: "100%" }}>
             <CardActionArea>
               <CardMedia
@@ -80,7 +80,7 @@ export default function ActionAreaCard() {
             </CardActionArea>
           </Card>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={3} xl={3}>
           <Card sx={{ maxWidth: 345, height: "100%" }}>
             <CardActionArea>
               <CardMedia

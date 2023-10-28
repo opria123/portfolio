@@ -29,8 +29,8 @@ export default function Projects() {
                     </motion.p>
                 </Grid>
                 <Grid item xs={12} />
-                <Grid item xs={1.5} />
-                <Grid item xs={3}>
+                <Grid item xs={1.5} xl={3} />
+                <Grid item xs={3} xl={2}>
                     <Card sx={{ maxWidth: 345, height: "100%" }}>
                         <CardActionArea>
                             <CardMedia
@@ -58,7 +58,7 @@ export default function Projects() {
                         </CardActionArea>
                     </Card>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={3} xl={2}>
                     <a style={{ textDecoration: "none" }} href="https://github.com/opria123/Bot-Cleaner" target="_blank">
                         <Card sx={{ maxWidth: 345, height: "100%" }}>
                             <CardActionArea>
@@ -87,9 +87,8 @@ export default function Projects() {
                         </Card>
                     </a>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={3} xl={2}>
                     <a style={{ textDecoration: "none" }} href="https://github.com/opria123/exploding-kittens" target="_blank">
-
                         <Card sx={{ maxWidth: 345, height: "100%" }}>
                             <CardActionArea>
                                 <CardMedia

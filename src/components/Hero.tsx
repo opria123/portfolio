@@ -10,8 +10,8 @@ const Hero = () => {
     <>
       <Grid className="section" container rowSpacing={10} spacing={1}>
         <Grid item xs={12} />
-        <Grid item xs={1.5} />
-        <Grid item xs={5}>
+        <Grid item xs={1.5} xl={3} />
+        <Grid item xs={5} xl={3} >
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm <span className='text-[#915EFF]'>Josh</span>
@@ -21,8 +21,8 @@ const Hero = () => {
             </p>
           </div>
         </Grid>
-        <Grid item xs={5}>
-          <EarthCanvas />
+        <Grid item xs={5} xl={3} >
+          <EarthCanvas/>
           <motion.div
             animate={{
               y: [0, 24, 0],
