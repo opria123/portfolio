@@ -4,11 +4,18 @@ const isCodeSandbox = 'SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in proc
 
 export default {
     plugins:
-    [
-        react()
-    ],
+        [
+            react()
+        ],
+    optimizeDeps: {
+        include: [
+            '@emotion/styled',
+            '@material-tailwind/react',
+            '@mui/icons-material',
+            '@mui/material'
+        ],
+    },
     root: 'src/',
-    publicDir: "../public/",
     base: './',
     server:
     {
@@ -20,5 +27,6 @@ export default {
         outDir: '../dist',
         emptyOutDir: true,
         sourcemap: true
-    }
+    },
+    publicDir: '../public'
 }
