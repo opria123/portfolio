@@ -10,7 +10,96 @@ export default create(
       isAbleToOpen: false,
       showSettings: false,
       modalTarget: "",
-      siteData: {},
+      siteData: {
+        "experiences": [
+          {
+            "title": "",
+            "company_name": "",
+            "icon": "",
+            "iconBg": "",
+            "date": "",
+            "points": [
+            ]
+          },
+          {
+            "title": "",
+            "company_name": "",
+            "icon": "",
+            "iconBg": "",
+            "date": "",
+            "points": [
+            ]
+          },
+          {
+            "title": "",
+            "company_name": "",
+            "icon": "",
+            "iconBg": "",
+            "date": "",
+            "points": [
+            ]
+          },
+          {
+            "title": "",
+            "company_name": "",
+            "icon": "",
+            "iconBg": "",
+            "date": "",
+            "points": [
+            ]
+          }
+        ],
+        "about": {
+          "introduction": "",
+          "cards": [
+            {
+              "image": "",
+              "title": "",
+              "alt": "",
+              "body": ""
+            },
+            {
+              "image": "",
+              "title": "",
+              "alt": "",
+              "body": ""
+            },
+            {
+              "image": "",
+              "title": "",
+              "alt": "",
+              "body": ""
+            }
+          ]
+        },
+        "projects": {
+          "introduction": "",
+          "cards": [
+            {
+              "image": "",
+              "title": "",
+              "alt": "",
+              "body": ""
+            },
+            {
+              "image": "",
+              "title": "",
+              "alt": "",
+              "body": ""
+            },
+            {
+              "image": "",
+              "title": "",
+              "alt": "",
+              "body": ""
+            }
+          ]
+        },
+        "hero": {
+          "header": "",
+          "body": ""
+        }
+      },
       resume: null,
 
       initializeAnimationSet: (animationSet) => {
@@ -103,7 +192,7 @@ export default create(
           return { isAbleToOpen: state.isAbleToOpen };
         });
       },
-      
+
       setShowSettings: (showSettings) => {
         set((state) => {
           state.showSettings = showSettings

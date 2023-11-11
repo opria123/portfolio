@@ -56,7 +56,7 @@ export default function Home() {
                 </Grid>
                 <Grid item xs={5} xl={4} />
                 <Grid item xs={2} >
-                    <Link style={{ textDecoration: "none" }} to="interactive">
+                    <Link style={{ textDecoration: "none" }} to="/interactive">
                         <Card sx={{ height: "100%", maxWidth: "95%" }}>
                             <CardActionArea>
                                 <CardMedia
@@ -78,8 +78,8 @@ export default function Home() {
                         </Card>
                     </Link>
                 </Grid>
-                <Grid item item xs={2}>
-                    <Link style={{ textDecoration: "none" }} to="standard">
+                <Grid item xs={2}>
+                    <Link style={{ textDecoration: "none" }} to="/standard">
                         <Card sx={{ maxWidth: "95%", height: "100%" }}>
                             <CardActionArea>
                                 <CardMedia

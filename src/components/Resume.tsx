@@ -18,7 +18,7 @@ export default function Resume() {
     return (
         <>
             <Viewer
-                fileUrl='/Josh-opria-resume.pdf'
+                fileUrl='https://raw.githubusercontent.com/opria123/portfolio/main/public/Josh-opria-resume.pdf'
             />
         </>
     );
