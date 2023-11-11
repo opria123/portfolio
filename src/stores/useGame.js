@@ -118,7 +118,7 @@ export default create(
         });
       },
 
-      setSideData: (siteData) => {
+      setSiteData: (siteData) => {
         set((state) => {
           state.siteData = siteData
           return { siteData: state.siteData };

@@ -7,8 +7,15 @@ import { Routes, Route } from "react-router-dom";
 import useGame from './stores/useGame'
 
 export default function App() {
-    // const setSiteData = useGame((state) => state.setSiteData);
-    // const setResume = useGame((state) => state.setResume);
+
+    const setSiteData = useGame((state) => state.setSiteData);
+    const setResume = useGame((state) => state.setResume);
+
+    fetch('https://raw.githubusercontent.com/opria123/portfolio/main/public/data.json')
+        .then(response => response.json())
+        .then(data => {
+            setSiteData(data)
+        });
 
     return (
         <Routes>

@@ -6,13 +6,13 @@ import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
-import { about } from "../constants";
 import parse from 'html-react-parser'
-
-
+import useGame from '../stores/useGame'
 import { CardActionArea, Grid } from '@mui/material';
 
 export default function ActionAreaCard() {
+  const siteData = useGame((state) => state.siteData);
+
   return (
     <>
       <Grid className='section' container row-spacing={20} spacing={1}>
@@ -26,7 +26,7 @@ export default function ActionAreaCard() {
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
           >
-            {parse(about.introduction)}
+            {parse(siteData.about.introduction)}
           </motion.p>
         </Grid>
         <Grid item xs={12} />
@@ -36,15 +36,15 @@ export default function ActionAreaCard() {
             <CardActionArea>
               <CardMedia
                 component="img"
-                image={about.cards[0].image}
-                alt={about.cards[0].alt}
+                image={siteData.about.cards[0].image}
+                alt={siteData.about.cards[0].alt}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  {about.cards[0].title}
+                  {siteData.about.cards[0].title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {parse(about.cards[0].body)}
+                  {parse(siteData.about.cards[0].body)}
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -55,15 +55,15 @@ export default function ActionAreaCard() {
             <CardActionArea>
               <CardMedia
                 component="img"
-                image={about.cards[1].image}
-                alt={about.cards[1].alt}
+                image={siteData.about.cards[1].image}
+                alt={siteData.about.cards[1].alt}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  {about.cards[1].title}
+                  {siteData.about.cards[1].title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {parse(about.cards[1].body)}
+                  {parse(siteData.about.cards[1].body)}
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -74,15 +74,15 @@ export default function ActionAreaCard() {
             <CardActionArea>
               <CardMedia
                 component="img"
-                image={about.cards[2].image}
-                alt={about.cards[2].alt}
+                image={siteData.about.cards[2].image}
+                alt={siteData.about.cards[2].alt}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  {about.cards[2].title}
+                  {siteData.about.cards[2].title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {parse(about.cards[2].body)}
+                  {parse(siteData.about.cards[2].body)}
                 </Typography>
               </CardContent>
             </CardActionArea>

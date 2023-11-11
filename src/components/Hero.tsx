@@ -3,11 +3,14 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import EarthCanvas from "./Earth";
 import { Grid } from "@mui/material";
-import { hero } from "../constants";
 import parse from 'html-react-parser'
 import React from "react";
+import useGame from "../stores/useGame";
+
 
 const Hero = () => {
+  const siteData = useGame((state) => state.siteData);
+
   return (
     <>
       <Grid className="section" container rowSpacing={10} spacing={1}>
@@ -16,10 +19,10 @@ const Hero = () => {
         <Grid item xs={5} xl={3} >
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}>
-              {parse(hero.header)}
+              {parse(siteData.hero.header)}
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              {parse(hero.body)}
+              {parse(siteData.hero.body)}
             </p>
           </div>
         </Grid>

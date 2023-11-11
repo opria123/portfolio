@@ -6,12 +6,13 @@ import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
-import { projects } from "../constants";
 import parse from 'html-react-parser'
-
 import { CardActionArea, Grid } from '@mui/material';
+import useGame from '../stores/useGame';
 
 export default function Projects() {
+    const siteData = useGame((state) => state.siteData);
+
     return (
         <>
             <Grid className='section' container row-spacing={20} spacing={1}>
@@ -25,7 +26,7 @@ export default function Projects() {
                     <motion.p
                         variants={fadeIn("", "", 0.1, 1)}
                     >
-                        {parse(projects.introduction)}
+                        {parse(siteData.projects.introduction)}
                     </motion.p>
                 </Grid>
                 <Grid item xs={12} />
@@ -36,16 +37,16 @@ export default function Projects() {
                             <CardMedia
                                 component="img"
                                 height="200"
-                                image={projects.cards[0].image}
-                                alt={projects.cards[0].alt}
+                                image={siteData.projects.cards[0].image}
+                                alt={siteData.projects.cards[0].alt}
                                 sx={{ objectFit: "contain" }}
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    {projects.cards[0].title}
+                                    {siteData.projects.cards[0].title}
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    {parse(projects.cards[0].body)}
+                                    {parse(siteData.projects.cards[0].body)}
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -58,8 +59,8 @@ export default function Projects() {
                                 <CardMedia
                                     component="img"
                                     height="200"
-                                    image={projects.cards[1].image}
-                                    alt={projects.cards[1].alt}
+                                    image={siteData.projects.cards[1].image}
+                                    alt={siteData.projects.cards[1].alt}
                                     sx={{ objectFit: "contain" }}
                                 />
                                 <CardContent>
@@ -67,7 +68,7 @@ export default function Projects() {
                                         Discord Bot
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        {parse(projects.cards[1].body)}
+                                        {parse(siteData.projects.cards[1].body)}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -81,16 +82,16 @@ export default function Projects() {
                                 <CardMedia
                                     component="img"
                                     height="200"
-                                    image={projects.cards[2].image}
-                                    alt={projects.cards[2].alt}
+                                    image={siteData.projects.cards[2].image}
+                                    alt={siteData.projects.cards[2].alt}
                                     sx={{ objectFit: "contain" }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
-                                        {projects.cards[2].title}
+                                        {siteData.projects.cards[2].title}
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        {parse(projects.cards[2].body)}
+                                        {parse(siteData.projects.cards[2].body)}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
