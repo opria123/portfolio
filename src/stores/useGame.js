@@ -10,6 +10,8 @@ export default create(
       isAbleToOpen: false,
       showSettings: false,
       modalTarget: "",
+      siteData: {},
+      resume: null,
 
       initializeAnimationSet: (animationSet) => {
         set((state) => {
@@ -113,6 +115,20 @@ export default create(
         set((state) => {
           state.modalTarget = modalTarget
           return { modalTarget: state.modalTarget };
+        });
+      },
+
+      setSideData: (siteData) => {
+        set((state) => {
+          state.siteData = siteData
+          return { siteData: state.siteData };
+        });
+      },
+
+      setResume: (resume) => {
+        set((state) => {
+          state.resume = resume
+          return { resume: state.resume };
         });
       },
     };

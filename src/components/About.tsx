@@ -6,6 +6,9 @@ import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
+import { about } from "../constants";
+import parse from 'html-react-parser'
+
 
 import { CardActionArea, Grid } from '@mui/material';
 
@@ -23,36 +26,25 @@ export default function ActionAreaCard() {
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
           >
-            I'm a skilled software developer with experience in TypeScript and
-            <br />
-            JavaScript, and expertise in frameworks like React, Node.js, and Angular
-            <br />
-            I'm a quick learner and collaborate closely with teamates and buissness partners to
-            <br />
-            create efficient, scalable, and user-friendly solutions that solve
-            <br />
-            real-world problems.
+            {parse(about.introduction)}
           </motion.p>
         </Grid>
         <Grid item xs={12} />
-        <Grid item xs={1.5}  xl={3}/>
+        <Grid item xs={1.5} xl={3} />
         <Grid item xs={3} xl={2}>
-          <Card sx={{ maxWidth: 345, height: "100%"}}>
+          <Card sx={{ maxWidth: 345, height: "100%" }}>
             <CardActionArea>
               <CardMedia
                 component="img"
-                image="../assets/web.png"
-                alt="web"
+                image={about.cards[0].image}
+                alt={about.cards[0].alt}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Web Developer
+                  {about.cards[0].title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Experience with multiple web development frameworks:
-                  <br />
-                  <br />
-                  React, Angular, Django, PHP
+                  {parse(about.cards[0].body)}
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -63,40 +55,34 @@ export default function ActionAreaCard() {
             <CardActionArea>
               <CardMedia
                 component="img"
-                image="../assets/backend.png"
-                alt="backend"
+                image={about.cards[1].image}
+                alt={about.cards[1].alt}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Back end
+                  {about.cards[1].title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Experience with multiple backend development frameworks:
-                  <br />
-                  <br />
-                  SpringBoot, NodeJs, Rails, SQL
+                  {parse(about.cards[1].body)}
                 </Typography>
               </CardContent>
             </CardActionArea>
           </Card>
         </Grid>
-        <Grid item xs={3} xl={3}>
+        <Grid item xs={3} xl={2}>
           <Card sx={{ maxWidth: 345, height: "100%" }}>
             <CardActionArea>
               <CardMedia
                 component="img"
-                image="../assets/conainter.png"
-                alt="containers"
+                image={about.cards[2].image}
+                alt={about.cards[2].alt}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Infrastructure
+                  {about.cards[2].title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Experience with Containerization and Infrastructure tools:
-                  <br />
-                  <br />
-                  Drocker, Kubernetes, AWS, Azure, Terraform
+                  {parse(about.cards[2].body)}
                 </Typography>
               </CardContent>
             </CardActionArea>

@@ -1,63 +1,148 @@
-import {
-    coverMyMeds,
-    nationwide
-  } from "../assets";
-  
-  const experiences = [
+const experiences = [
+  {
+    title: "Software Engineer ||",
+    company_name: "CoverMyMeds",
+    icon: "../assets/covermymeds.png",
+    iconBg: "#383E56",
+    date: "Jun 2022 - Current",
+    points: [
+      "Designed and implemented a NodeJS application that can handle running experiments in any app as well as log the related information.",
+      "Designed and implemented a data model for an experiments application that supports experiments, feature toggling, logging, and custom user filtering for the experiments.",
+      "Mentored 3 engineers on their career goals and how to work on achieving them.",
+      "Brought in Azure Functions as a technology and developed an enterprise wide deployment, monitoring, and development strategy for them.",
+    ],
+  },
+  {
+    title: "Technical Lead",
+    company_name: "Nationwide",
+    icon: "../assets/nationwide.png",
+    iconBg: "#E6DEDD",
+    date: "Dec 2020 - May 2022",
+    points: [
+      "Designed and implemented digital experiments to get an understanding of what our users would like to see.",
+      "Stood up GraphQL API using AWS AppSync to consolidate API calls as well as obscure sensitive data.",
+      "Worked with business partners to design digital experiments that spanned across multiple large application.",
+      "Mentored and trained developers on best practices, cloud technologies, coding languages, and architectural design.",
+    ],
+  },
+  {
+    title: "Sr. Software Engineer",
+    company_name: "Nationwide",
+    icon: "../assets/nationwide.png",
+    iconBg: "#383E56",
+    date: "Mar 2020 - Dec 2020",
+    points: [
+      "Designed and implemented document storage for an Angular site in AWS S3.",
+      "Led charge on changing to be a Dev-Ops team by designing fully automated CI/CD pipelines with added monitoring and reporting.",
+      "Designed and implemented APIs that get over 100,000 calls per hour.",
+      "Did live demonstrations for multiple teams on how to design and build CI/CD pipelines.",
+    ],
+  },
+  {
+    title: "Software Engineer",
+    company_name: "Nationwide",
+    icon: "../assets/nationwide.png",
+    iconBg: "#E6DEDD",
+    date: "Jun 2019 - Mar 2020",
+    points: [
+      "Worked with Java to write back-end services to handle business logic and database connections.",
+      "Worked in an agile/Scrum team framework Used Angular 8 for web development.",
+      "Stood up multiple applications of all diﬀerent types in Kubernetes Containerized applications using Docker.",
+      "Stood up CI/CD pipelines utilizing Concourse and Jenkins Stood up Ruby automated test suite for APIs.",
+    ],
+  },
+];
+
+const about = {
+  introduction: "I'm a skilled software developer with experience in TypeScript and  \
+    <br /> \
+    JavaScript, and expertise in frameworks like React, Node.js, and Angular \
+    <br /> \
+    I'm a quick learner and collaborate closely with teamates and buissness partners to \
+    <br /> \
+    create efficient, scalable, and user-friendly solutions that solve \
+    <br /> \
+    real-world problems.",
+  cards: [
     {
-      title: "Software Engineer ||",
-      company_name: "CoverMyMeds",
-      icon: coverMyMeds,
-      iconBg: "#383E56",
-      date: "Jun 2022 - Current",
-      points: [
-        "Designed and implemented a NodeJS application that can handle running experiments in any app as well as log the related information.",
-        "Designed and implemented a data model for an experiments application that supports experiments, feature toggling, logging, and custom user filtering for the experiments.",
-        "Mentored 3 engineers on their career goals and how to work on achieving them.",
-        "Brought in Azure Functions as a technology and developed an enterprise wide deployment, monitoring, and development strategy for them.",
-      ],
+      image: "../assets/web.png",
+      title: "Web Developer",
+      alt: "web",
+      body: "Experience with multiple web development frameworks: \
+        <br /> \
+        <br /> \
+        React, Angular, Django, PHP"
     },
     {
-      title: "Technical Lead",
-      company_name: "Nationwide",
-      icon: nationwide,
-      iconBg: "#E6DEDD",
-      date: "Dec 2020 - May 2022",
-      points: [
-        "Designed and implemented digital experiments to get an understanding of what our users would like to see.",
-        "Stood up GraphQL API using AWS AppSync to consolidate API calls as well as obscure sensitive data.",
-        "Worked with business partners to design digital experiments that spanned across multiple large application.",
-        "Mentored and trained developers on best practices, cloud technologies, coding languages, and architectural design.",
-      ],
+      image: "../assets/backend.png",
+      title: "Web Developer",
+      alt: "backend",
+      body: "Experience with multiple backend development frameworks: \
+        <br /> \
+        <br /> \
+        SpringBoot, NodeJs, Rails, SQL"
     },
     {
-      title: "Sr. Software Engineer",
-      company_name: "Nationwide",
-      icon: nationwide,
-      iconBg: "#383E56",
-      date: "Mar 2020 - Dec 2020",
-      points: [
-        "Designed and implemented document storage for an Angular site in AWS S3.",
-        "Led charge on changing to be a Dev-Ops team by designing fully automated CI/CD pipelines with added monitoring and reporting.",
-        "Designed and implemented APIs that get over 100,000 calls per hour.",
-        "Did live demonstrations for multiple teams on how to design and build CI/CD pipelines.",
-      ],
+      image: "../assets/conainter.png",
+      title: "Infrastructure",
+      alt: "containers",
+      body: "Experience with Containerization and Infrastructure tools: \
+        <br /> \
+        <br /> \
+        Drocker, Kubernetes, AWS, Azure, Terraform"
+    }
+  ]
+}
+
+const projects = {
+  introduction: "The following are a some projects that I have taken on outside of work, \
+    <br /> \
+    to solve a problem I was seeing in my personal life or learn a new skill.",
+  cards: [
+    {
+      image: "../assets/Toledo-Zoo.jpg",
+      title: "Turtle recognition",
+      alt: "toledo zoo",
+      body: "Worked with the Toledo Zoo on an app that used opencv and python to \
+        do image recognition to identify turtles. \
+        This was an attempt at keeping track of turtle movement. \
+        <br /> \
+        <br /> \
+        <span className='text-blue'>#python </span> \
+        <span className='text-green'>#swift </span> \
+        <span className='text-yellow'>#opencv </span>"
     },
     {
-      title: "Software Engineer",
-      company_name: "Nationwide",
-      icon: nationwide,
-      iconBg: "#E6DEDD",
-      date: "Jun 2019 - Mar 2020",
-      points: [
-        "Worked with Java to write back-end services to handle business logic and database connections.",
-        "Worked in an agile/Scrum team framework Used Angular 8 for web development.",
-        "Stood up multiple applications of all diﬀerent types in Kubernetes Containerized applications using Docker.",
-        "Stood up CI/CD pipelines utilizing Concourse and Jenkins Stood up Ruby automated test suite for APIs.",
-      ],
+      image: "../assets/discord.png",
+      title: "Discord Bot",
+      alt: "discord",
+      body: "Wrote a Discord bot that would remove messages from other bots and \
+        the commands to trigger them, so that the discrod chats would not \
+        get cluttered with bot messages \
+        <br /> \
+        <br /> \
+        <span className='text-yellow'>#discord </span> \
+        <span className='text-red'>#nodejs </span>"
     },
-  ];
-  
-  
-  export { experiences, };
-  
+    {
+      image: "../assets/exploding-kittens.png",
+      title: "Exploding Kittens",
+      alt: "exploding kittens",
+      body: "Exploding Kittens is a card game, I have a project that is currently in \
+      progress to make a web version of the card game utilizing web-sockts for multiplayer \
+      <br /> \
+      <br /> \
+      <span className='text-yellow'>#react </span> \
+      <span className='text-blue'>#nodejs </span> \
+      <span className='text-green'>#exploding-kittens </span>"
+    }
+  ]
+}
+
+const hero = {
+  header: "Hi, I'm <span className='text-[#915EFF]'>Josh</span>",
+  body: "I am a Software Enginner who loves learning, new technologies, and innovating with creative solutions."
+}
+
+
+export { experiences, about, projects, hero };
