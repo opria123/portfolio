@@ -77,7 +77,7 @@ export default function SettingsModal() {
                 <h1>Controls</h1>
                 <Typography gutterBottom>
                     <span className="control-character">W</span>
-                    <span className="setting-description">Move Fowrward</span>
+                    <span className="setting-description">Move Forward</span>
                 </Typography>
                 <Typography gutterBottom>
                     <span className="control-character">A</span>
