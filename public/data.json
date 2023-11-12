@@ -22,7 +22,7 @@
             "points": [
                 "Designed and implemented digital experiments to get an understanding of what our users would like to see.",
                 "Stood up GraphQL API using AWS AppSync to consolidate API calls as well as obscure sensitive data.",
-                "Worked with business partners to design digital experiments that spanned across multiple large application.",
+                "Worked with business partners to design digital experiments that spanned across multiple large applications.",
                 "Mentored and trained developers on best practices, cloud technologies, coding languages, and architectural design."
             ]
         },
@@ -77,7 +77,7 @@
         ]
     },
     "projects": {
-        "introduction": "The following are a some projects that I have taken on outside of work, <br /> to solve a problem I was seeing in my personal life or learn a new skill.",
+        "introduction": "The following are a some projects that I have taken on outside of work <br /> to solve a problem I was seeing in my personal life or learn a new skill.",
         "cards": [
             {
                 "image": "../assets/Toledo-Zoo.jpg",
@@ -89,7 +89,7 @@
                 "image": "../assets/discord.png",
                 "title": "Discord Bot",
                 "alt": "discord",
-                "body": "Wrote a Discord bot that would remove messages from other bots and the commands to trigger them, so that the discrod chats would not get cluttered with bot messages <br /> <br /> <span className='text-yellow'>#discord </span> <span className='text-red'>#nodejs </span>"
+                "body": "Wrote a Discord bot that would remove messages from other bots and the commands to trigger them, so that the discord chats would not get cluttered with bot messages <br /> <br /> <span className='text-yellow'>#discord </span> <span className='text-red'>#nodejs </span>"
             },
             {
                 "image": "../assets/exploding-kittens.png",
@@ -101,6 +101,6 @@
     },
     "hero": {
         "header": "Hi, I'm <span className='text-[#915EFF]'>Josh</span>",
-        "body": "I am a Software Enginner who loves learning, new technologies, and innovating with creative solutions."
+        "body": "I am a Software Engineer who loves learning, new technologies, and innovating with creative solutions."
     }
 }
