@@ -154,7 +154,7 @@ export default function FloatingPlatform() {
         </mesh>
       </RigidBody>
 
-      <RigidBody userData="about" position={[3, 0, 6]} mass={100} ref={floatingPlateRef2}>
+      <RigidBody userData="about" position={[3, 0.2, 7]} mass={100} ref={floatingPlateRef2}>
         <Text
           scale={0.5}
           color="#15AC07"
@@ -169,7 +169,7 @@ export default function FloatingPlatform() {
           (Press Enter Here)
         </Text>
         <mesh receiveShadow >
-          <boxGeometry args={[5, 0.1, 5]} />
+          <boxGeometry args={[4, 0.1, 3]} />
           <meshStandardMaterial color={"grey"} opacity={0} transparent/>
         </mesh>
       </RigidBody>
