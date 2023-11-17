@@ -64,7 +64,7 @@
             },
             {
                 "image": "../assets/backend.png",
-                "title": "Web Developer",
+                "title": "Backend",
                 "alt": "backend",
                 "body": "Experience with multiple backend development frameworks: <br /> <br /> SpringBoot, NodeJs, Rails, SQL"
             },
