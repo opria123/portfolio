@@ -8,6 +8,7 @@ export default create(
       animationSet: {},
       showModal: false,
       isAbleToOpen: false,
+      isMenuAbleToOpen: true,
       showSettings: false,
       modalTarget: "",
       siteData: {
@@ -187,6 +188,12 @@ export default create(
       },
 
       setIsAbleToOpen: (isAbleToOpen) => {
+        set((state) => {
+          state.isAbleToOpen = isAbleToOpen
+          return { isAbleToOpen: state.isAbleToOpen };
+        });
+      },
+      setMenuIsAbleToOpen: (isAbleToOpen) => {
         set((state) => {
           state.isAbleToOpen = isAbleToOpen
           return { isAbleToOpen: state.isAbleToOpen };

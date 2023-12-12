@@ -104,7 +104,7 @@ const ContactForm = () => {
               <strong>Contact Form</strong>
             </Typography>
             <Typography variant="h6" color="textSecondary" align="center">
-              Contact Us
+              Contact Me
             </Typography>
           </Grid>
           <Grid item xs={12} sm={2}/>

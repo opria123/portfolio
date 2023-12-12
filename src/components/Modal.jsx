@@ -33,6 +33,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 export default function DynamicModal() {
   const showModal = useGame((state) => state.showModal);
   const setShowModal = useGame((state) => state.setShowModal);
+  const setIsMenuAbleToOpen = useGame((state) => state.setIsMenuAbleToOpen);
   const modalTarget = useGame((state) => state.modalTarget);
 
   let content;
@@ -50,6 +51,7 @@ export default function DynamicModal() {
   const handleClose = () => {
     document.getElementsByTagName('canvas')[0].requestPointerLock();
     setShowModal(false)
+    setIsMenuAbleToOpen(true)
   };
 
   return (
