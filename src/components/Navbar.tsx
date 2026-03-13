@@ -16,10 +16,6 @@ import Button from '@mui/material/Button';
 import { Link } from '@mui/material';
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
 }
 
@@ -37,7 +33,7 @@ export default function DrawerAppBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Joshua Opria
       </Typography>
       <Divider />
       <List>
@@ -49,6 +45,28 @@ export default function DrawerAppBar(props: Props) {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem disablePadding>
+          <ListItemButton
+            component="a"
+            href="https://www.linkedin.com/in/joshua-opria/"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ textAlign: 'center' }}
+          >
+            <ListItemText primary="LinkedIn" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            component="a"
+            href="https://github.com/opria123"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ textAlign: 'center' }}
+          >
+            <ListItemText primary="GitHub" />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
@@ -78,12 +96,18 @@ export default function DrawerAppBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <a href={'/' + item}>
-                <Button key={item} sx={{ color: '#fff' }}>
+              <a key={item} href={'/' + item}>
+                <Button sx={{ color: '#fff' }}>
                   {item}
                 </Button>
               </a>
             ))}
+            <a href="https://www.linkedin.com/in/joshua-opria/" target="_blank" rel="noopener noreferrer">
+              <Button sx={{ color: '#fff' }}>LinkedIn</Button>
+            </a>
+            <a href="https://github.com/opria123" target="_blank" rel="noopener noreferrer">
+              <Button sx={{ color: '#fff' }}>GitHub</Button>
+            </a>
           </Box>
         </Toolbar>
       </AppBar>
@@ -94,7 +118,7 @@ export default function DrawerAppBar(props: Props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },

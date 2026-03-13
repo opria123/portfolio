@@ -6,6 +6,7 @@ import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
 import Projects from "./Projects";
+import Education from "./Education";
 import ContactForm from "./Contact";
 
 
@@ -21,6 +22,7 @@ export default function Standard() {
                 <About />
                 <Work />
                 <Projects/>
+                <Education />
                 <div className='relative z-0'>
                     <ContactForm/>
                 </div>

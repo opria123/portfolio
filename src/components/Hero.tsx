@@ -13,10 +13,8 @@ const Hero = () => {
 
   return (
     <>
-      <Grid className="section" container rowSpacing={10} spacing={1}>
-        <Grid item xs={12} />
-        <Grid item xs={1.5} xl={3} />
-        <Grid item xs={5} xl={3} >
+      <Grid className="section" container rowSpacing={4} spacing={2} sx={{ px: { xs: 3, sm: 8 }, pt: { xs: 6, sm: 10 }, maxWidth: 1280, mx: 'auto' }}>
+        <Grid item xs={12} md={6}>
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}>
               {parse(siteData.hero.header)}
@@ -26,7 +24,7 @@ const Hero = () => {
             </p>
           </div>
         </Grid>
-        <Grid item xs={5} xl={3} >
+        <Grid item xs={12} md={6}>
           <EarthCanvas />
           <motion.div
             animate={{

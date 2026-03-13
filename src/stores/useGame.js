@@ -80,19 +80,28 @@ export default create(
               "image": "",
               "title": "",
               "alt": "",
-              "body": ""
+              "summary": "",
+              "description": "",
+              "tags": [],
+              "links": []
             },
             {
               "image": "",
               "title": "",
               "alt": "",
-              "body": ""
+              "summary": "",
+              "description": "",
+              "tags": [],
+              "links": []
             },
             {
               "image": "",
               "title": "",
               "alt": "",
-              "body": ""
+              "summary": "",
+              "description": "",
+              "tags": [],
+              "links": []
             }
           ]
         },

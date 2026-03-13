@@ -15,79 +15,42 @@ export default function ActionAreaCard() {
 
   return (
     <>
-      <Grid className='section' container row-spacing={20} spacing={1}>
-        <Grid item xs={1.5} xl={3} />
-        <Grid item xs={7}>
+      <Grid className='section' container rowSpacing={2} spacing={2} sx={{ px: { xs: 3, sm: 8 }, py: { xs: 6, sm: 10 }, maxWidth: 1280, mx: 'auto' }}>
+        <Grid item xs={12}>
           <motion.div variants={textVariant()}>
-            <p className='{styles.sectionSubText}'>Introduction</p>
-            <h2 className='{styles.sectionHeadText}'>Overview.</h2>
+            <p className={styles.sectionSubText}>Introduction</p>
+            <h2 className={styles.sectionHeadText}>Overview.</h2>
           </motion.div>
 
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
+            style={{ maxWidth: 800 }}
           >
             {parse(siteData.about.introduction)}
           </motion.p>
         </Grid>
-        <Grid item xs={12} />
-        <Grid item xs={1.5} xl={3} />
-        <Grid item xs={3} xl={2}>
-          <Card sx={{ maxWidth: 345, height: "100%" }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                image={siteData.about.cards[0].image}
-                alt={siteData.about.cards[0].alt}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {siteData.about.cards[0].title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {parse(siteData.about.cards[0].body)}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Grid>
-        <Grid item xs={3} xl={2}>
-          <Card sx={{ maxWidth: 345, height: "100%" }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                image={siteData.about.cards[1].image}
-                alt={siteData.about.cards[1].alt}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {siteData.about.cards[1].title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {parse(siteData.about.cards[1].body)}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Grid>
-        <Grid item xs={3} xl={2}>
-          <Card sx={{ maxWidth: 345, height: "100%" }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                image={siteData.about.cards[2].image}
-                alt={siteData.about.cards[2].alt}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {siteData.about.cards[2].title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {parse(siteData.about.cards[2].body)}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Grid>
+        {siteData.about.cards.map((card, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card sx={{ height: "100%", maxWidth: 400 }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  image={card.image}
+                  alt={card.alt}
+                  sx={{ objectFit: 'contain', height: 160, p: 2 }}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {card.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {parse(card.body)}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </>
   );
