@@ -81,13 +81,13 @@ const about = {
 }
 
 const projects = {
-  introduction: "Projects I've built outside of work — applying AI/ML, systems engineering, \
+  introduction: "Personal projects applying AI/ML, systems engineering, \
     and game development to solve real problems.",
   cards: [
     {
-      image: "../assets/autocharter.png",
-      title: "AutoCharter",
-      alt: "autocharter",
+      image: "../assets/strum.png",
+      title: "STRUM",
+      alt: "strum",
       summary: "End-to-end AI pipeline that converts raw audio into full playable charts (drums, guitar, bass, vocals, keys) for Clone Hero / YARG — no manual charting needed.",
       description: "Generates complete multi-instrument, multi-difficulty charts covering drums, guitar, bass, \
         vocals, pro-keys, and syncs video to audio when available. Uses Demucs for source separation, a custom \
@@ -97,7 +97,9 @@ const projects = {
         Trained on 4.88M labeled hits from 5K+ songs on an NVIDIA DGX Spark. Produces game-ready charts in \
         ~60–90 seconds per song.",
       tags: ["pytorch", "deep-learning", "cuda", "python", "whisper"],
-      links: []
+      links: [
+        { label: "GitHub", url: "https://github.com/opria123/strum" }
+      ]
     },
     {
       image: "../assets/yarg-mp.png",
@@ -110,8 +112,8 @@ const projects = {
       tags: ["csharp", "unity", "networking", "docker"],
       links: [
         { label: "YARG.Networking", url: "https://github.com/opria123/YARG.Networking" },
-        { label: "YARG (Game Client)", url: "https://github.com/YARC-Official/YARG" },
-        { label: "YARG.Core", url: "https://github.com/YARC-Official/YARG.Core" }
+        { label: "YARG (Game Client)", url: "https://github.com/opria123/YARG/tree/online-multiplayer-modular-refactor" },
+        { label: "YARG.Core", url: "https://github.com/opria123/YARG.Core/tree/online-p2p-support" }
       ]
     },
     {
@@ -130,7 +132,7 @@ const projects = {
 
 const hero = {
   header: "Hi, I'm <span className='text-[#915EFF]'>Josh</span>",
-  body: "Software Engineer with an MSc in AI & Machine Learning — building intelligent systems, from distributed cloud platforms to deep learning pipelines."
+  body: "Software Engineer with an MSc in AI & Machine Learning — shipping production systems at scale and training deep learning models from scratch."
 }
 
 

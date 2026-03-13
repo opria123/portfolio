@@ -20,8 +20,8 @@ export default function Standard() {
                     <Hero />
                 </div>
                 <About />
-                <Work />
                 <Projects/>
+                <Work />
                 <Education />
                 <div className='relative z-0'>
                     <ContactForm/>

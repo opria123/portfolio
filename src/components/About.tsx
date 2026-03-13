@@ -8,7 +8,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import parse from 'html-react-parser'
 import useGame from '../stores/useGame'
-import { CardActionArea, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 
 export default function ActionAreaCard() {
   const siteData = useGame((state) => state.siteData);
@@ -32,7 +32,6 @@ export default function ActionAreaCard() {
         {siteData.about.cards.map((card, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card sx={{ height: "100%", maxWidth: 400 }}>
-              <CardActionArea>
                 <CardMedia
                   component="img"
                   image={card.image}
@@ -47,7 +46,6 @@ export default function ActionAreaCard() {
                     {parse(card.body)}
                   </Typography>
                 </CardContent>
-              </CardActionArea>
             </Card>
           </Grid>
         ))}

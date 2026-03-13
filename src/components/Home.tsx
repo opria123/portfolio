@@ -71,7 +71,7 @@ export default function Home() {
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
                                         Experience the site through a 3d interactive world.
-                                        Where you can walk around and interact with nodes to see the portfolio.
+                                        Where you can walk around and interact with nodes to see my portfolio.
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>

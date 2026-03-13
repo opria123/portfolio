@@ -88,7 +88,7 @@ export default function Projects() {
             <Grid className='section' container rowSpacing={2} spacing={2} sx={{ px: { xs: 3, sm: 8 }, py: { xs: 6, sm: 10 }, maxWidth: 1280, mx: 'auto' }}>
                 <Grid item xs={12}>
                     <motion.div variants={textVariant()}>
-                        <p className={styles.sectionSubText}>My work</p>
+                        <p className={styles.sectionSubText}>What I've built</p>
                         <h2 className={styles.sectionHeadText}>Projects.</h2>
                     </motion.div>
 
