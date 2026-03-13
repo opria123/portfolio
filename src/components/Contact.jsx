@@ -147,14 +147,9 @@ const ContactForm = () => {
             <TextareaAutosize 
               className='text-area'
               placeholder="Message"
-              label="Message *"
-              variant="outlined"
               minRows="10"
               name="message"
-              helperText={hasError('message') ? formState.errors.message[0] : null}
-              error={hasError('message')}
               onChange={handleChange}
-              type="text"
               value={formState.values.message || ''}
             />
           </Grid>

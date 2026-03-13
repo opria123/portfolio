@@ -45,7 +45,7 @@ export default function DrawerAppBar(props: Props) {
             </ListItemButton>
           </ListItem>
         ))}
-        <ListItem disablePadding>
+        <ListItem key="linkedin" disablePadding>
           <ListItemButton
             component="a"
             href="https://www.linkedin.com/in/joshua-opria/"
@@ -56,7 +56,7 @@ export default function DrawerAppBar(props: Props) {
             <ListItemText primary="LinkedIn" />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem key="github" disablePadding>
           <ListItemButton
             component="a"
             href="https://github.com/opria123"
